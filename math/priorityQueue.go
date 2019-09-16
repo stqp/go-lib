@@ -1,4 +1,4 @@
-package lib
+package math
 
 // PriorityQueue is something.
 type PriorityQueue struct {

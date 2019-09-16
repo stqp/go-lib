@@ -6,7 +6,7 @@ import (
 
 func TestPush(t *testing.T) {
 	pq := PriorityQueue{
-		heapSize: 100,
+		HeapSize: 100,
 	}
 	in := []int{
 		5, 9, 1, 10, 7, 6, 8,
@@ -27,8 +27,8 @@ func TestPush(t *testing.T) {
 
 func TestPushWithReverseOption(t *testing.T) {
 	pq := PriorityQueue{
-		heapSize: 100,
-		reverse:  true,
+		HeapSize: 100,
+		Reverse:  true,
 	}
 	in := []int{
 		5, 9, 1, 10, 7, 6, 8,

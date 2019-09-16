@@ -2,27 +2,27 @@ package math
 
 // PriorityQueue is something.
 type PriorityQueue struct {
-	heapSize int
+	HeapSize int
 	heap     []int
 	size     int
-	reverse  bool
+	Reverse  bool
 }
 
 // Push pushs a number to queue
 func (p *PriorityQueue) Push(x int) {
 
 	// initialization
-	if p.heapSize == 0 {
-		p.heapSize = 100
+	if p.HeapSize == 0 {
+		p.HeapSize = 100
 	}
-	if len(p.heap) == 0 && p.heapSize > 0 {
-		p.heap = make([]int, p.heapSize)
+	if len(p.heap) == 0 && p.HeapSize > 0 {
+		p.heap = make([]int, p.HeapSize)
 	}
 	i := p.size
 	p.size++
 	for i > 0 {
 		n := (i - 1) / 2
-		if p.reverse {
+		if p.Reverse {
 			if p.heap[n] > x {
 				break
 			}
@@ -47,7 +47,7 @@ func (p *PriorityQueue) Pop() int {
 	for (i*2 + 1) < p.size {
 		a := i*2 + 1
 		b := i*2 + 2
-		if p.reverse {
+		if p.Reverse {
 			if b < p.size && p.heap[b] >= p.heap[a] {
 				a = b
 			}
